@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "framer-motion": "^6.5.1",
+    "nprogress": "^0.2.0",
     "prop-types": "^15.8.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0",
-        "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0"
-  },
-  "peerDependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "build": "npm run build:js && npm run build:types",
@@ -24,7 +30,6 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "format": "prettier --write \"src/**/*.{ts,tsx, js}\""
-
   },
   "eslintConfig": {
     "extends": [
@@ -46,14 +51,17 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
-    "@commitlint/cli": "^16.2.4",  
+    "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/jest": "^27.5.1",
+    "@types/ngprogress": "^1.0.29",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "@types/react-helmet": "^6.1.5",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "babel-loader": "^8.2.5",
