@@ -26,11 +26,10 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "build": "npm run build:js && npm run build:types",
+    "build": "yarn run build:js && yarn run build:types",
     "build:js": "rollup -c rollup.config.js",
     "build:types": "tsc -p tsconfig.build.json",
     "start": "react-scripts start",
-    "test": "jest --env=jsdom --watchAll=false",
     "lint": "eslint \"src/**/*.{ts,tsx, js}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx, js}\" --fix",
     "prepare": "husky install",
