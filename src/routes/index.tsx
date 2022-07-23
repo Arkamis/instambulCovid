@@ -37,21 +37,30 @@ const Loadable = (Component: FC) => (props: object) => {
 
 const MainLayout = Loadable(lazy(() => import('../layouts/MainLayout')))
 const NotFound = Loadable(lazy(() => import('../pages/NotFound')))
+const LandingPage = Loadable(lazy(() => import('../pages/LandingPage')))
+
 export default function Router() {
   return useRoutes([
     // Main Routes
     {
-      path: '*',
-      element: <MainLayout />,
-      children: [
-        { element: <Navigate to="/app/dashboard" replace /> },
-        // {
-        //   path: 'login',
-        //   element: <Login />,
-        // },
-        { path: '404', element: <NotFound /> },
-        { path: '*', element: <Navigate to="/404" replace /> },
-      ],
+      path: 'app',
+      element: <LandingPage />,
+      //   children: [
+      //     { element: <Navigate to="/app" replace /> },
+      //     // {
+      //     //   path: 'login',
+      //     //   element: <Login />,
+      //     // },
+      //     { path: '404', element: <NotFound /> },
+      //     { path: '*', element: <Navigate to="/app" replace /> },
+      //   ],
     },
+    {
+      path: '/',
+      element: <MainLayout />,
+      children: [{ path: '/', element: <LandingPage /> }],
+    },
+    { path: '404', element: <NotFound /> },
+    { path: '*', element: <Navigate to="/404" replace /> },
   ])
 }

@@ -45,8 +45,9 @@ const ResourcesSection = () => {
 }
 
 const LandingPage = () => {
+  console.log('hello landing here')
   return (
-    <Container>
+    <Container disableGutters>
       <Hero />
       <ResourcesSection />
     </Container>
