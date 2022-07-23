@@ -1,3 +1,4 @@
+import ChartPage from 'pages/ChartPage'
 import { FC, lazy, Suspense } from 'react'
 import { Navigate, useLocation, useRoutes } from 'react-router-dom'
 
@@ -58,7 +59,10 @@ export default function Router() {
     {
       path: '/',
       element: <MainLayout />,
-      children: [{ path: '/', element: <LandingPage /> }],
+      children: [
+        { path: '/', element: <LandingPage /> },
+        { path: '/estadisticas', element: <ChartPage /> },
+      ],
     },
     { path: '404', element: <NotFound /> },
     { path: '*', element: <Navigate to="/404" replace /> },

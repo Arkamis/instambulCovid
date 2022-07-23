@@ -1,4 +1,5 @@
 import { experimentalStyled } from '@mui/material'
+import Footer from 'components/Footer'
 import { Outlet } from 'react-router-dom'
 
 import MainNavbar from './MainNavbar'
@@ -37,6 +38,7 @@ const MainLayout = () => (
       <MainLayoutContainer>
         <MainLayoutContent>
           <Outlet />
+          <Footer />
         </MainLayoutContent>
       </MainLayoutContainer>
     </MainLayoutWrapper>
